@@ -24,7 +24,7 @@ def random_pic():
     else:
         if switch==15:
             label.config(image=random.choice(list))
-            label['text']='中奖'
+            label2.config(text='中奖!!!',fg='red',font=(18))
 
         else:
             delay=50*switch
@@ -38,10 +38,12 @@ def destroy():
 
 
 
-label=tk.Label(root,image=pic,text='123')
+label=tk.Label(root,image=pic)
+label2=tk.Label(root,text='')
 
 button=tk.Button(root,text='stop',width=25,command=destroy)
 button.pack(side='bottom')
 random_pic()
 label.pack()
+label2.pack()
 root.mainloop()
